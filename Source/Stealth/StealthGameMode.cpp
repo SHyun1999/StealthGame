@@ -17,7 +17,7 @@ AStealthGameMode::AStealthGameMode()
 	HUDClass = AStealthHUD::StaticClass();
 }
 
-void AStealthGameMode::CompleteMission(APawn* InstigatorPawn)
+void AStealthGameMode::CompleteMission(APawn* InstigatorPawn, bool bMissionSuccess)
 {
 	if (InstigatorPawn)
 	{
@@ -37,7 +37,7 @@ void AStealthGameMode::CompleteMission(APawn* InstigatorPawn)
 		}
 	
 
-		OnMissionCompleted(InstigatorPawn);
+		OnMissionCompleted(InstigatorPawn, bMissionSuccess);
 	}
 
 }

@@ -13,6 +13,7 @@ class UCameraComponent;
 class UMotionControllerComponent;
 class UAnimMontage;
 class USoundBase;
+class UPawnNoiseEmitterComponent;
 
 UCLASS(config=Game)
 class AStealthCharacter : public ACharacter
@@ -50,6 +51,9 @@ class AStealthCharacter : public ACharacter
 	/** Motion controller (left hand) */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UMotionControllerComponent* L_MotionController;
+
+	UPROPERTY(VisibleAnywhere, Category = "AI")
+	UPawnNoiseEmitterComponent* NoiseEmitterComp;
 
 public:
 	AStealthCharacter();
